@@ -10,5 +10,5 @@ gulp.task('styles:build', function() {
 });
 
 gulp.task('styles:watch',function() {
-    gulp.watch('sass/**/*.scss',['styles:build']);
+    return gulp.watch('sass/**/*.scss',['styles:build']);
 });
