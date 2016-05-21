@@ -1,0 +1,49 @@
+.text-large {
+  font-size: large; }
+
+#chat-box {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  overflow: auto;
+  margin-bottom: 25px; }
+  #chat-box .msg {
+    max-width: 77%;
+    clear: both; }
+    #chat-box .msg .msg__user {
+      position: relative;
+      font-size: 11px; }
+    #chat-box .msg .msg__text {
+      background: #E7E7E7;
+      display: block;
+      margin: 10px 15px 7px;
+      padding: 10px;
+      border-radius: 15px;
+      clear: both; }
+    #chat-box .msg .msg__time {
+      clear: both;
+      top: -8px;
+      position: relative;
+      font-size: 11px; }
+  #chat-box .msg--out {
+    float: right; }
+    #chat-box .msg--out .msg__user {
+      float: right;
+      left: -30px; }
+    #chat-box .msg--out .msg__time {
+      float: right;
+      left: -12px; }
+  #chat-box .msg--in {
+    float: left; }
+    #chat-box .msg--in .msg__user {
+      float: left;
+      left: 30px; }
+    #chat-box .msg--in .msg__time {
+      float: left;
+      left: 12px; }
+
+.usr-input-msg {
+  margin-bottom: 20px; }
+  .usr-input-msg textarea {
+    resize: none; }

@@ -1,7 +1,8 @@
+.text-xlarge {
+  font-size: x-large; }
+
 .start-container {
   padding: 100px 0 0 0; }
-  .start-container .text-large {
-    font-size: x-large; }
   .start-container label {
     display: block;
     font-weight: normal;

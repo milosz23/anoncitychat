@@ -1,0 +1,21 @@
+.text-large {
+  font-size: large; }
+
+.find-container .form-group {
+  text-align: center; }
+
+.find-container p,
+.find-container .tagsLabel {
+  margin: 35px 0 15px 0;
+  font-weight: normal; }
+
+.find-container #tagsInput,
+.find-container button {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 300px;
+  max-width: 95%;
+  text-align: center; }
+
+.find-container .radio-inline {
+  width: 120px; }
