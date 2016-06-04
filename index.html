@@ -1,33 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" ng-app="cityChat">
 <head>
     <meta charset="UTF-8">
-    <title>Node Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Start screen</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+    <!--<div ng-include src="'views/start.html'"></div>-->
+    <ng-view></ng-view>
 
-    <div class="formWrapper">
-        <form action="" id="nameForm" hidden>
-            <label for="name">Name: </label>
-            <input type="text" id="name">
-            <input type="submit" id="nameButton" value="GO!">
-        </form>
-    </div>
-    <div id="user">
-        <span id="userName"></span>
-        <a href=""  id="signOut">exit</a>
-    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <div id="chatBody"></div>
-
-    <div class="formWrapper">
-        <form action="" id="chatForm">
-            <input type="text" id="message">
-            <input type="submit" id="chatButton">
-        </form>
-    </div>
-
-    <script src="chat.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </body>
 </html>
