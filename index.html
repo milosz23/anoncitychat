@@ -10,13 +10,14 @@
 </head>
 <body>
     <!--<div ng-include src="'views/start.html'"></div>-->
-    <ng-view></ng-view>
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="bower_components/angular/angular.js"></script>
-    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
 </body>

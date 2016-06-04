@@ -1,10 +1,10 @@
 angular.module('cityChat')
-.controller('startController', function() {
-    console.log('startController loaded');
+.controller('StartController', function() {
+    console.log('StartController loaded');
 })
-.controller('findController', function() {
-    console.log('findController loaded');
+.controller('FindController', function() {
+    console.log('FindController loaded');
 })
-.controller('chatController', function() {
-    console.log('chatController loaded');
+.controller('ChatController', function() {
+    console.log('ChatController loaded');
 });
