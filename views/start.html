@@ -5,8 +5,8 @@
         <label for="nameInput" class="text-info text-center text-xlarge">
             Enter your name to start talking
         </label>
-        <input type="text" id="nameInput" class="form-control" placeholder="Name">
-        <button type="button" class="btn btn-success">Continue</button>
+        <input name="name" ng-model="userName" type="text" id="nameInput" class="form-control" placeholder="Name">
+        <button ng-click="setUserInfo()" ng-disabled="userName.length < 1" type="button" class="btn btn-success">Continue</button>
     </div>
 
 </div>

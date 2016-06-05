@@ -1,6 +1,6 @@
 var fs = require('fs'),
     http = require('http'),
-    //cloud9 deploy or local 3000 port
+//cloud9 deploy or local 3000 port
     port = process.env.PORT ? process.env.PORT : 3000;
 
 /*
@@ -20,6 +20,14 @@ http.createServer(function (req, res) {
             res.writeHead(200);
             res.end(data);
         });
+    } if (req.url === '/ip') {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        var ip = req.headers['x-forwarded-for'] ||
+            req.connection.remoteAddress ||
+            req.socket.remoteAddress ||
+            req.connection.socket.remoteAddress;
+        res.writeHead(200);
+        res.end(ip);
     } else {
         if (req.url === "/") {
             req.url = '/index.html'
