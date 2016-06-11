@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "assert": "^1.4.1",
-    "mongodb": "^2.1.18"
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18",
+    "socket.io": "^1.4.6"
   }
 }

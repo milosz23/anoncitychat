@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="public/chat.css">
+<script src="/socket.io/socket.io.js"></script>
 
 <div class="container chat-container">
 
@@ -7,30 +8,11 @@
     </p>
 
     <div id="chat-box">
-        <p class="msg msg--in">
-            <span class="msg__user text-info">John Kozyr</span>
-            <span class="msg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut culpa dicta ducimus, eum id ipsum numquam obcaecati odio, pariatur quia quis rem tempore totam ullam! Accusantium amet laborum rem?</span>
-            <span class="msg__time text-info">12:15:30</span>
-        </p>
-        <p class="msg msg--in">
-            <span class="msg__user text-info">John Kozyr</span>
-            <span class="msg__text">Lorem ipsum dolor sit ametmet laborum</span>
-            <span class="msg__time text-info">12:15:33</span>
-        </p>
-        <p class="msg msg--out">
-            <span class="msg__user text-info">user1</span>
-            <span class="msg__text">Lorem ipsum dolor sit amet.</span>
-            <span class="msg__time text-info">12:15:50</span>
-        </p>
-        <p class="msg msg--out">
-            <span class="msg__user text-info">user1 11111111</span>
-            <span class="msg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut culpa dicta ducimus, eum id ipsum numquam obcaecati odio, pariatur quia quis rem tempore totam ullam! Accusantium amet laborum rem?</span>
-            <span class="msg__time text-info">12:15:30</span>
-        </p>
+
     </div>
     <div class="input-group usr-input-msg">
-        <textarea id="usr-input-msg-text" class="form-control custom-control" rows="3"></textarea>
-        <span id="usr-input-msg-btn" class="input-group-addon btn btn-primary">Send</span>
+        <textarea ng-model="message" id="usr-input-msg-text" class="form-control custom-control" rows="3"></textarea>
+        <span ng-click="sendMessage()" id="usr-input-msg-btn" class="input-group-addon btn btn-primary">Send</span>
     </div>
 
 </div>

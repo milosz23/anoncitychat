@@ -27,6 +27,9 @@ angular.module('cityChat', ['ui.router'])
             // route for the contactus page
             .state('chat', {
                 url:'/chat',
+                params: {
+                    data: null
+                },
                 views: {
                     'header': {
                         templateUrl : 'views/partials/header.html',
