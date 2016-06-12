@@ -63,9 +63,11 @@ io.on('connection', function (socket) {
         socket.broadcast.to(room).emit('chat message', msg);
         var chatId = room.slice('userRoom_'.length);
 
-        var url = 'mongodb://localhost:27017/test';
+        var mongoURL = process.env.IP ?
+        'mongodb://' + process.env.IP +':27017/test' :
+            'mongodb://localhost:27017/test';
         // Use connect method to connect to the Server
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(mongoURL, function (err, db) {
             console.log("Connected to mongoDB");
             var collection = db.collection("userChats");
             var o_id = new mongo.ObjectID(chatId);
