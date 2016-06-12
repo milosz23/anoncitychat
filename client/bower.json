@@ -14,11 +14,10 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "bootstrap": "^3.3.6",
-    "angular-ui-router": "^0.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "angular": "^1.5.6"
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1"
   }
 }

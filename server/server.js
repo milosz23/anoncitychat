@@ -97,7 +97,7 @@ var server = http.createServer(function (req, res) {
             req.url = '/index.html'
         }
         console.log('GET file: ' + req.url);
-        fs.readFile(__dirname + req.url, function (err, data) {
+        fs.readFile(__dirname + '/../client/public' + req.url, function (err, data) {
             if (err) {
                 res.writeHead(404);
                 res.end(JSON.stringify(err));
