@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="start.css">
+<div class="container start-container" ng-controller="StartController as start">
+
+    <div class="form-group">
+        <label for="nameInput" class="text-info text-center text-xlarge">
+            Enter your name to start talking
+        </label>
+        <input name="name" ng-model="userName" type="text" id="nameInput" class="form-control" placeholder="Name">
+        <button ng-click="setUserInfo()" ng-disabled="userName.length < 1" type="button" class="btn btn-success">Continue</button>
+    </div>
+
+</div>

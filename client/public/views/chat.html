@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="chat.css">
+<script src="/socket.io/socket.io.js"></script>
+
+<div class="container chat-container">
+
+    <p class="text-info text-large" ng-show="chatStarted">
+        Enjoy talking with partner:
+    </p>
+    <p class="text-info text-large" ng-show="!chatStarted">
+        Waiting for partner..
+    </p>
+
+    <div id="chat-box">
+
+    </div>
+    <div class="input-group usr-input-msg">
+        <textarea ng-disabled="!chatStarted" ng-model="message" id="usr-input-msg-text" class="form-control custom-control" rows="3"></textarea>
+        <span ng-click="sendMessage()" id="usr-input-msg-btn" class="input-group-addon btn btn-primary">Send</span>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="find.css">
+
+<div class="container find-container" ng-controller="FindController as find">
+    <div class="form-group">
+        <p class="text-info text-center text-large">
+            Find partner in your city or all around the world
+        </p>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> City
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Country
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> World
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="tagsInput" class="text-info text-center text-large tagsLabel">
+            Add tags to talk to person with same interests
+        </label>
+        <input type="text" id="tagsInput" class="form-control" placeholder="Tags">
+        <br>
+
+    </div>
+
+    <button ng-click="findChat()" type="button" class="btn btn-success btn-lg">Start</button>
+</div>
