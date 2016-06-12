@@ -28,6 +28,10 @@ io.on('connection', function (socket) {
         console.log(socket.id);
         socket.join(room);
         activeRooms[socket.id] = room;
+
+        if (socket.adapter.rooms[room].length === 2) {
+            io.to(room).emit('start', '');
+        };
     });
 
     socket.on('chat message', function (msg) {

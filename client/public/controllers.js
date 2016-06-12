@@ -61,15 +61,23 @@ angular.module('cityChat')
         if(!$state.params.data) {
             $state.go('find');
         }
-        
+
         console.log('ChatController loaded', 'join room', 'userRoom_' + $state.params.data.room);
 
         $scope.message = '';
 
         var socket = io();
+        $scope.chatStarted = false;
         socket.on('connect', function () {
             // Connected, let's sign-up for to receive messages for this room
             socket.emit('join room', 'userRoom_' + $state.params.data.room);
+        });
+
+        socket.on('start', function (msg) {
+            console.log('chat start');
+            $scope.$apply(function () {
+                $scope.chatStarted = true;
+            });
         });
 
         $scope.sendMessage = function () {
