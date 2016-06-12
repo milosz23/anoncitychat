@@ -1,4 +1,8 @@
 angular.module('cityChat', ['ui.router'])
+    .constant("SERVER_DETAILS", {
+        "API_URL": "http://test.vi:3000"
+        // "API_URL": "http://anoncitychat-anoncitychat.c9users.io"
+    })
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             // route for the start page
@@ -20,7 +24,7 @@ angular.module('cityChat', ['ui.router'])
                     },
                     'content': {
                         templateUrl : 'views/find.html',
-                        controller  : 'FindController'
+                        //controller  : 'FindController'
                     }
                 }
             })

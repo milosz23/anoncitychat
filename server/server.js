@@ -14,7 +14,7 @@ app.use('/find', findRouter);
 app.use(express.static(__dirname + '/../client/public'));
 
 http.listen(port, function () {
-    console.log('Listening on port 3000!');
+    console.log('Listening on port ' + port);
 });
 
 
@@ -31,6 +31,10 @@ io.on('connection', function (socket) {
     });
 
     socket.on('chat message', function (msg) {
+        msg = {
+            user: msg.user,
+            text: msg.text.replace(/(<([^>]+)>)/ig,"")  //strip tags from user input
+        };
         console.log(socket.rooms);
         for (var room in socket.rooms) {
             var userRoom;
@@ -48,6 +52,11 @@ io.on('connection', function (socket) {
         if (!room) {
             return;
         }
+        var msg = {
+            user: '<i>SYSTEM</i>',
+            text: '<h1>Partner disconnected.. <a href="/#/find">Find new</a></h1>'
+        };
+        socket.broadcast.to(room).emit('chat message', msg);
         var chatId = room.slice('userRoom_'.length);
 
         var url = 'mongodb://localhost:27017/test';
